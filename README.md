@@ -1,55 +1,42 @@
 # Azure VM Backup & Recovery Lab
 
-## 📌 Overview
-This project demonstrates how to configure and manage Azure VM backups using Recovery Services Vault. It includes backup policy setup, backup execution, restore point verification, and recovery workflow.
+##  Project Overview
+This project demonstrates how to protect an Azure Virtual Machine using Azure Backup with a Recovery Services Vault and a daily backup policy.
 
----
+##  Architecture Diagram
+![Azure Backup Architecture](architecture/azure-backup-lab-diagram.png)
 
-## 🏗️ Architecture
-- Azure Virtual Machine (vm-backup-01)
-- Virtual Network (vnet-backup-lab)
-- Recovery Services Vault (rsv-backup-lab)
-- Backup Policy (Daily)
-- Restore Points
-
----
-
-## ⚙️ Steps Performed
-1. Created Resource Group
-2. Configured Virtual Network and Subnet
-3. Deployed Virtual Machine
-4. Created Recovery Services Vault
-5. Enabled Backup for VM
-6. Applied Backup Policy
-7. Triggered Backup Job
-8. Verified Backup Status
-9. Reviewed Restore Points
-10. Configured Restore Options
-
----
-
-## 📸 Screenshots
-All implementation steps are documented in the `/screenshots` folder.
-
----
-
-## 🧠 Key Learnings
-- Difference between snapshot and vault backup
-- Application-consistent backups
-- Backup policy and retention behavior
-- Restore workflow (VM vs disk restore)
-- Azure UI differences between VM and Vault views
-
----
-
-## 🛠️ Skills Demonstrated
+##  Technologies Used
 - Azure Virtual Machines
-- Azure Backup
+- Azure Virtual Network (VNet)
 - Recovery Services Vault
-- Disaster Recovery Concepts
-- Azure Networking
+- Azure Backup
+- Backup Policies
 
+##  Key Components
+- **VM:** vm-backup-01
+- **Resource Group:** rg-backup-lab-prod
+- **VNet:** vnet-backup-lab
+- **Subnet:** snet-main
+- **Backup Vault:** Recovery Services Vault
+- **Backup Policy:** Daily backup policy
+
+##  Backup Workflow
+1. Virtual Machine is deployed inside a subnet
+2. Recovery Services Vault is created
+3. Backup policy is configured (daily backups)
+4. VM is protected by Azure Backup
+5. Restore points are automatically generated
+
+##  Key Learnings
+- How Azure Backup protects virtual machines
+- Difference between backup policy and restore points
+- How Recovery Services Vault manages backup data
+- Real-world disaster recovery concepts
+
+##  Outcome
+Successfully configured Azure VM backup and validated restore points for recovery scenarios.
 ---
 
-## 🚀 Outcome
+##  Outcome
 Successfully implemented and validated a complete Azure VM backup and recovery solution.
